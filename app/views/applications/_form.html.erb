@@ -1,0 +1,17 @@
+<div>
+  <%= form_with model: @application, local: true do |form| %>
+    <p>
+      <%= form.label :name_and_surname %>
+      <%= form.text_field :full_name %>
+    </p>
+    <p>
+      <%= form.label :birth %>
+      <%= form.text_area :birth %>
+    </p>
+      <br>
+      <p>
+        <%= form.submit submit %>
+        <%= link_to 'Cancel', @application %>
+      </p>
+  <% end %>
+</div>
