@@ -1,0 +1,17 @@
+<div>
+  <%= form_with model: @job, local: true do |form| %>
+    <p>
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+    </p>
+    <p>
+      <%= form.label :description %>
+      <%= form.text_area :description %>
+    </p>
+      <br>
+      <p>
+        <%= form.submit submit %>
+        <%= link_to 'Cancel', @job %>
+      </p>
+  <% end %>
+</div>
