@@ -1,17 +1,33 @@
 <div>
-  <%= form_with model: @application, local: true do |form| %>
+  <%= form_with model: [@job,@application], local: true do |form| %>
     <p>
       <%= form.label :name_and_surname %>
       <%= form.text_field :full_name %>
     </p>
     <p>
       <%= form.label :birth %>
-      <%= form.text_area :birth %>
+      <%= form.text_field :birth %>
+    </p>
+    <p>
+      <%= form.label :email %>
+      <%= form.text_field :email %>
+    </p>
+    <p>
+      <%= form.label :phone %>
+      <%= form.text_field :phone %>
+    </p>
+    <p>
+      <%= form.label :address %>
+      <%= form.text_field :address %>
+    </p>
+    <p>
+      <%= form.label :education %>
+      <%= form.text_field :education %>
     </p>
       <br>
       <p>
         <%= form.submit submit %>
-        <%= link_to 'Cancel', @application %>
+        <%= link_to 'Cancel', root_path %>
       </p>
   <% end %>
 </div>

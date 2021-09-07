@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :jobs
-  resources :applications
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  resources :jobs, shallow: true do
+    resources :applications
+  end
+
+  root to: 'jobs#index'
 end

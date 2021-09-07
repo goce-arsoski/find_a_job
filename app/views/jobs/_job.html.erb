@@ -3,4 +3,8 @@
     <span><%= job.name %></span><br>
     <span><%= job.description %></span>
   <% end %>
-</div> 
+  <%= link_to 'New Application', new_job_application_path(job), class: 'card-footer-item' %>
+  <p>
+    <%= button_to "logout", destroy_user_session_path, method: :delete %>
+  </p>
+</div>
